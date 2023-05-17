@@ -1,0 +1,1 @@
+This is a README file on this To-Do List Application built using HTML, CSS, and JavaScript. 

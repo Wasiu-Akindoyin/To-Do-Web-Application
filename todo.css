@@ -1,0 +1,169 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	color: white;
+	background-color: rgb(43, 40, 40);
+}
+
+button{
+	appearance: none;
+	background: none;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+main{
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 2em 1.5em;
+}
+
+.app-wrapper{
+	width: 100%;
+	max-width: 768px;
+}
+
+.app-wrapper header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1em;
+}
+
+.app-wrapper header h1{
+	font-weight: bold;
+	font-size: 25px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+
+.app-wrapper header button{
+	color: white;
+	font-size: 18px;
+	border-bottom: 2px solid white;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.app-wrapper header button:hover{
+	font-size: 18.5px;
+}
+
+.item{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1.5em;
+	border-radius: 1em;
+	background-color: #6b776b;
+	/* box-shadow: 0 0 4px red; */
+	margin-bottom: 1.5em;
+}
+
+.item:last-of-type{
+	margin-bottom: 0;
+}
+
+.item input[type="checkbox"]{
+	margin-right: 1em;
+}
+
+.item input[type="text"]{
+	appearance: none;
+	background: none;
+	border: none;
+	outline: none;
+	font-weight: 400;
+	color: white;
+	font-size: 1.3em;
+	flex: 1 1 0%;
+	margin-right: 1em;
+}
+
+.item input[type="text"]:not(:disabled){
+	border-bottom: 2px solid white;
+}
+
+.item.complete {
+	opacity: 0.7;
+}
+
+.item.complete input[type="text"]{
+	text-decoration: line-through;
+}
+
+.item:hover, 
+.item:focus-within{
+	outline: 2px solid white;
+}
+
+.actions button{
+	color: #ccc;
+	margin-right: 1em;
+	opacity: 0.8;
+	transform: 0.1s;
+}
+
+.actions button.remove-btn{
+	color: #c00000;
+}
+
+.actions button:hover{
+	opacity: 1;
+}
+
+.actions button:last-of-type{
+	margin-right: 0;
+}
+
+@media screen and (max-width: 485px) {
+	.app-wrapper{
+		width: 100%;
+		max-width: 468px;
+	}
+
+	.app-wrapper header h1{
+		font-size: 18px;
+	}
+	
+	.app-wrapper header button{
+		font-size: 14px;
+	}
+
+	.item{
+		padding: 0.8em;
+		border-radius: 0.5em;
+		background-color: #6b776b;
+		margin-bottom: 1.5em;
+	}
+}
+
+@media screen and (max-width: 398px) {
+	.app-wrapper{
+		width: 100%;
+		max-width: 468px;
+	}
+
+	.app-wrapper header h1{
+		font-size: 15px;
+	}
+	
+	.app-wrapper header button{
+		font-size: 12px;
+	}
+
+	.item{
+		padding: 0.5em;
+		border-radius: 0.3em;
+		background-color: #6b776b;
+		margin-bottom: 1.5em;
+	}
+}
